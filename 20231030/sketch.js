@@ -1,5 +1,5 @@
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(840, 840);
 	background(0);
 	angleMode(DEGREES)
 	colorMode(HSB)
@@ -8,11 +8,12 @@ function setup() {
 	w = width
 	h = height
 	rectMode(RADIUS)
-	// frameRate(1)
+	
 }
 
 
 function draw() {
+	frameRate(random(30,90))
 	translate(0, 0)
 	let mainHue = random(0, 360)
 	let cH = mainHue + random(0, 60)
@@ -34,17 +35,17 @@ function draw() {
 			if (count % 1 == 0) {
 				blendMode(ADD)
 				strokeWeight(1)
-				circle(j, i, 300 * (sin(frameCount / 5)))
+				circle(j, i, 300 * (sin(frameCount / 2)))
 			}
 			if (count % 2 == 0) {
 				blendMode(MULTIPLY)
 				strokeWeight(2)
-				rect(j, i, 600 * noise(sin(frameCount/7)))
+				rect(j, i, 600 * noise(sin(frameCount/4)))
 			}
 			if (count % 3 == 0) {
 				blendMode(MULTIPLY)
 				strokeWeight(2)
-				circle(j, i, 800 * noise(sin(frameCount/9)))
+				circle(j, i, 800 * noise(sin(frameCount/6)))
 			}
 		}
 	}
