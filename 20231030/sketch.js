@@ -34,17 +34,17 @@ function draw() {
 			if (count % 1 == 0) {
 				blendMode(ADD)
 				strokeWeight(1)
-				circle(j, i, 300 * (sin(frameCount / 2)))
+				circle(j, i, 300 * (sin(frameCount / 5)))
 			}
 			if (count % 2 == 0) {
 				blendMode(MULTIPLY)
 				strokeWeight(2)
-				rect(j, i, 600 * noise(sin(frameCount/4)))
+				rect(j, i, 600 * noise(sin(frameCount/7)))
 			}
 			if (count % 3 == 0) {
 				blendMode(MULTIPLY)
 				strokeWeight(2)
-				circle(j, i, 800 * noise(sin(frameCount/6)))
+				circle(j, i, 800 * noise(sin(frameCount/9)))
 			}
 		}
 	}
